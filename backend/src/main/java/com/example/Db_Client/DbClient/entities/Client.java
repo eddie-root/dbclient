@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,20 +15,22 @@ import javax.persistence.Table;
 @Table(name = "tb_client")
 public class Client implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+
+	@Column(unique = true)
 	private String cpf;
 	private Double income;
-	private int children;
+	private Integer children;
 	private Instant birthDate;
-	
-	public Client() {		
+
+	public Client() {
 	}
-	
-	public Client(Long id, String name, String cpf, Double income, int children, Instant birthDate) {
+
+	public Client(Long id, String name, String cpf, Double income, Integer children, Instant birthDate) {
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
@@ -56,7 +59,7 @@ public class Client implements Serializable {
 		return children;
 	}
 
-	public void setChildren(int children) {
+	public void setChildren(Integer children) {
 		this.children = children;
 	}
 
@@ -96,8 +99,4 @@ public class Client implements Serializable {
 		return Objects.equals(id, other.id);
 	}
 
-	
-	
-	
-	
 }
