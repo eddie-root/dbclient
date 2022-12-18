@@ -7,4 +7,3 @@ INSERT INTO tb_client (name, CPF, income, children, birth_date) VALUES ('Maria B
 INSERT INTO tb_client (name, CPF, income, children, birth_date) VALUES ('Maria Brown', '77888888-8', 2333.0, 2, '2003-07-30');
 INSERT INTO tb_client (name, CPF, income, children, birth_date) VALUES ('Maria Brown', '768888888-8', 3000.0, 0, '2000-07-03');
 INSERT INTO tb_client (name, CPF, income, children, birth_date) VALUES ('Maria Brown', '98888888-0', 1200.0, 0, '2002-09-25');
-INSERT INTO tb_client (name, CPF, income, children, birth_date) VALUES ('Maria maria', '98888822-8', 1200.0, 1, '2004-04-24');
