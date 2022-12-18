@@ -31,6 +31,18 @@ public class ClientService {
 		Client entity = obj.orElseThrow(() -> new ClientNotFoundException("Cliente não cadastrado no banco de dados."));
 		return new ClientDTO(entity);
 	}
+
+	@Transactional
+	public ClientDTO insert(ClientDTO dto) {
+		Client cli = new Client();
+		cli.setName(dto.getName());
+		cli.setCpf(dto.getCpf());
+		cli.setIncome(dto.getIncome());
+		cli.setChildren(dto.getChildren());
+		cli.setBirthDate(dto.getBirthDate());
+		cli = repository.save(cli);
+		return new ClientDTO(cli);
+	}
 	
 	
 }

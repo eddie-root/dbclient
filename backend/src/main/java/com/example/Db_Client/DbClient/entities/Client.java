@@ -70,13 +70,17 @@ public class Client implements Serializable {
 	public void setBirthDate(Instant birthDate) {
 		this.birthDate = birthDate;
 	}
-
-	public Long getId() {
-		return id;
-	}
-
+	
 	public String getCpf() {
 		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	
+	public Long getId() {
+		return id;
 	}
 
 	@Override
@@ -99,4 +103,5 @@ public class Client implements Serializable {
 		return Objects.equals(id, other.id);
 	}
 
+	
 }
